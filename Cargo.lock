@@ -637,6 +637,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "ecolor"
+version = "0.24.2"
+source = "git+https://github.com/emilk/egui.git#ffcc3f066c181132956a5938683361be34d14f9a"
+
+[[package]]
 name = "eframe"
 version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -645,7 +650,7 @@ dependencies = [
  "bytemuck",
  "cocoa",
  "directories-next",
- "egui",
+ "egui 0.24.0",
  "egui-winit",
  "egui_glow",
  "glow",
@@ -677,11 +682,21 @@ checksum = "2e46df77bb493b9ead5733540efdd2a1b0c18a5f75915921fc734495108172a5"
 dependencies = [
  "accesskit",
  "ahash",
- "epaint",
+ "epaint 0.24.0",
  "log",
  "nohash-hasher",
  "ron",
  "serde",
+]
+
+[[package]]
+name = "egui"
+version = "0.24.2"
+source = "git+https://github.com/emilk/egui.git#ffcc3f066c181132956a5938683361be34d14f9a"
+dependencies = [
+ "ahash",
+ "epaint 0.24.2",
+ "nohash-hasher",
 ]
 
 [[package]]
@@ -691,7 +706,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "065960051f1ff843be036a1743bd9fc8dfd508c0444dce35d620febed91fad2b"
 dependencies = [
  "arboard",
- "egui",
+ "egui 0.24.0",
  "log",
  "raw-window-handle",
  "serde",
@@ -708,7 +723,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bcacd802e71d0c3b510cf1e1558432e4afc1434f3ccc9a8b23b42c39cd194207"
 dependencies = [
  "bytemuck",
- "egui",
+ "egui 0.24.0",
  "glow",
  "log",
  "memoffset 0.7.1",
@@ -731,6 +746,11 @@ dependencies = [
  "bytemuck",
  "serde",
 ]
+
+[[package]]
+name = "emath"
+version = "0.24.2"
+source = "git+https://github.com/emilk/egui.git#ffcc3f066c181132956a5938683361be34d14f9a"
 
 [[package]]
 name = "enumn"
@@ -765,12 +785,25 @@ dependencies = [
  "ab_glyph",
  "ahash",
  "bytemuck",
- "ecolor",
- "emath",
+ "ecolor 0.24.0",
+ "emath 0.24.0",
  "log",
  "nohash-hasher",
  "parking_lot",
  "serde",
+]
+
+[[package]]
+name = "epaint"
+version = "0.24.2"
+source = "git+https://github.com/emilk/egui.git#ffcc3f066c181132956a5938683361be34d14f9a"
+dependencies = [
+ "ab_glyph",
+ "ahash",
+ "ecolor 0.24.2",
+ "emath 0.24.2",
+ "nohash-hasher",
+ "parking_lot",
 ]
 
 [[package]]
@@ -1745,7 +1778,7 @@ name = "puffin_egui"
 version = "0.24.0"
 dependencies = [
  "eframe",
- "egui",
+ "egui 0.24.2",
  "indexmap",
  "natord",
  "once_cell",
